@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/my-photo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Movies</title>
+</head>
+  <body >
+    <header>
+     
+      <section class="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center overflow-hidden bg-[url('/globe-ing.jpg')] bg-center bg-cover ">
+         <nav class="h-20 w-full  bg-transparent flex items-center justify-between p-10 fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 h-16 bg-[#090b10]/80 backdrop-blur-md border-b border-yellow-800/30">
+          <div class="h-18 w-40  flex items-center justify-between  font-saira font-bold "><a href="#" class="font-boldonse text-xl tracking-wide text-yellow-400 no-underline">
+      MY <span class="text-white">60</span> MOVIES
+    </a></div>
+          <div class="h-18 w-18 bg-[url('/my-photo.jpg')] bg-center bg-cover border-1 border-amber-50 rounded-4xl "></div>
+         </nav>
+         <div class="relative z-10 flex flex-col items-center gap-4 px-6"><h1 class="anim-2 font-boldonse text-5xl sm:text-6xl md:text-8xl leading-none text-white">
+        MY <span class="text-yellow-400">60</span><br>MOVIES
+      </h1></div>
+         
+      </section>
+    </header>
+
+    <!-- Filter Buttons — human touch, thoda rough -->
+    <div class="w-full bg-[#0f0f0f] py-5 px-4 flex flex-wrap items-center justify-center gap-3 sticky top-16 z-40 border-b border-yellow-900/40" id="filter-container">
+      <button data-filter="All" class="filter-btn active bg-yellow-400 text-gray-900 border-2 border-yellow-400 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all">All</button>
+      <button data-filter="True Story" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">True Story</button>
+      <button data-filter="Adventure" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">Adventure</button>
+      <button data-filter="Romantic" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">Romantic</button>
+      <button data-filter="Horror" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">Horror</button>
+      <button data-filter="Comedy" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">Comedy</button>
+      <button data-filter="Series" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">Series</button>
+    </div>
+
+
+    <main class="bg-[#111111] p-4 sm:p-8 md:p-10 flex flex-col gap-5 min-h-screen" id="movies-list">
+
+      <!-- ===== TRUE STORY — 10 movies ===== -->
+
+      <!-- Movie 1 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">1</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title One</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna. Ek real insaan ki real story jo sach mein ho gayi thi aur duniya ko hila ke rakh di.</p>
+        </div>
+      </section>
+
+      <!-- Movie 2 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">2</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533742460831-2947116634eb?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Two</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna. Ek real insaan ki real story jo sach mein ho gayi thi.</p>
+        </div>
+      </section>
+
+      <!-- Movie 3 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">3</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Three</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 4 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">4</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1517436073-3b1b1b4b1b9e?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Four</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 5 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">5</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1596796245367-7b83072236d2?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Five</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 6 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">6</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533234427049-9e9eb0ebac03?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Six</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 7 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">7</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1590928734255-a4b7b51bc5de?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Seven</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 8 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">8</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Eight</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 9 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">9</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1516728778615-2d590ea1855e?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Nine</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 10 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">10</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Ten</h2>
+            <span class="text-xs text-yellow-500 font-saira font-semibold uppercase tracking-widest">True Story</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- ===== ADVENTURE — 10 movies ===== -->
+
+      <!-- Movie 11 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">11</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Eleven</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 12 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">12</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Twelve</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 13 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">13</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533234427049-9e9eb0ebac03?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Thirteen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 14 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">14</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1590928734255-a4b7b51bc5de?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Fourteen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 15 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">15</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Fifteen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 16 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">16</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1580234797602-22c37b4a6217?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Sixteen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 17 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">17</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1618588507085-c79565432917?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Seventeen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 18 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">18</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Eighteen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 19 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">19</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1543536448-d209d2d13a1c?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Nineteen</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 20 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">20</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1531686264889-56fdcabd163f?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title Twenty</h2>
+            <span class="text-xs text-orange-400 font-saira font-semibold uppercase tracking-widest">Adventure</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- ===== ROMANTIC — 10 movies ===== -->
+
+      <!-- Movie 21 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">21</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 21</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 22 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">22</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 22</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 23 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">23</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1516728778615-2d590ea1855e?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 23</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 24 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">24</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533742460831-2947116634eb?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 24</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 25 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">25</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 25</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 26 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">26</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 26</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 27 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">27</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1596796245367-7b83072236d2?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 27</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 28 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">28</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 28</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 29 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">29</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1517436073-3b1b1b4b1b9e?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 29</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 30 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">30</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 30</h2>
+            <span class="text-xs text-rose-400 font-saira font-semibold uppercase tracking-widest">Romantic</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- ===== HORROR — 10 movies ===== -->
+
+      <!-- Movie 31 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">31</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 31</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 32 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">32</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 32</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 33 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">33</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 33</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 34 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">34</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 34</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 35 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">35</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 35</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 36 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">36</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1580234797602-22c37b4a6217?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 36</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 37 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">37</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1618588507085-c79565432917?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 37</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 38 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">38</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533742460831-2947116634eb?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 38</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 39 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">39</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1596796245367-7b83072236d2?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 39</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 40 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Horror">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">40</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 40</h2>
+            <span class="text-xs text-red-500 font-saira font-semibold uppercase tracking-widest">Horror</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- ===== COMEDY — 10 movies ===== -->
+
+      <!-- Movie 41 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">41</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1543536448-d209d2d13a1c?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 41</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 42 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">42</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1531686264889-56fdcabd163f?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 42</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 43 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">43</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 43</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 44 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">44</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 44</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 45 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">45</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 45</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 46 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">46</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533234427049-9e9eb0ebac03?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 46</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 47 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">47</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1590928734255-a4b7b51bc5de?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 47</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 48 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">48</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1516728778615-2d590ea1855e?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 48</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 49 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">49</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 49</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 50 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">50</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Movie Title 50</h2>
+            <span class="text-xs text-green-400 font-saira font-semibold uppercase tracking-widest">Comedy</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni movie ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- ===== SERIES — 10 movies ===== -->
+
+      <!-- Movie 51 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">51</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1580234797602-22c37b4a6217?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 51</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 52 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">52</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1618588507085-c79565432917?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 52</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 53 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">53</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 53</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 54 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">54</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 54</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 55 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">55</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 55</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 56 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">56</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1533742460831-2947116634eb?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 56</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 57 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">57</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1596796245367-7b83072236d2?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 57</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 58 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">58</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 58</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 59 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">59</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 59</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+      <!-- Movie 60 -->
+      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6" data-category="Series">
+        <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">60</div>
+        <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&q=80')] bg-cover bg-center rounded-md"></div>
+        <div class="flex-1 flex flex-col gap-2 pt-1">
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 class="font-boldonse text-xl sm:text-2xl text-white leading-tight">Series Title 60</h2>
+            <span class="text-xs text-sky-400 font-saira font-semibold uppercase tracking-widest">Series</span>
+          </div>
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed font-saira">Placeholder description. Tu baad mein apni series ka description yahan likhna.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-[#0F111E] py-10 px-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-800">
+      <div class="flex flex-col gap-1">
+        <span class="font-boldonse text-yellow-400 text-lg tracking-wide">MY <span class="text-white">60</span> MOVIES</span>
+        <span class="text-neutral-500 text-sm font-saira tracking-wider">by Alok Gupta</span>
+      </div>
+      <div class="h-14 w-14 rounded-full border-2 border-yellow-800 bg-[url('/my-photo.jpg')] bg-center bg-cover"></div>
+    </footer>
+
+    <!-- Instagram floating button - bottom right WhatsApp style -->
+    <a href="https://www.instagram.com/" id="insta-btn" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 hover:scale-110 active:scale-95" style="background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+      </svg>
+    </a>
+
+    <!-- Scroll to top button - bottom left -->
+    <button id="scroll-top-btn" class="fixed bottom-24 right-6 z-50 w-12 h-12 rounded-full bg-yellow-400 text-gray-900 flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-yellow-300 hover:scale-110 active:scale-95">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </button>
+
+    <!-- JS filter script — type=module zaroori hai Vite mein -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

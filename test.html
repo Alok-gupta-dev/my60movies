@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/public/my-photo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>My 20 Movies</title>
+
+  <!-- Only animations that can't be done in Tailwind alone -->
+  <style>
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+    .anim-1 { animation: slideUp 0.7s ease forwards 0.2s; opacity: 0; }
+    .anim-2 { animation: slideUp 0.7s ease forwards 0.45s; opacity: 0; }
+    .anim-3 { animation: slideUp 0.7s ease forwards 0.65s; opacity: 0; }
+    .anim-4 { animation: slideUp 0.7s ease forwards 0.85s; opacity: 0; }
+    .anim-5 { animation: slideUp 0.7s ease forwards 1.05s; opacity: 0; }
+    .bounce  { animation: bounce-slow 2s ease-in-out infinite; }
+
+    /* Category filter hide/show */
+    .movie-card { transition: opacity 0.3s, transform 0.3s; }
+    .movie-card.hidden-card { display: none; }
+
+    /* Active filter button */
+    .filter-btn.active {
+      background-color: #e2b04a;
+      color: #000;
+      border-color: #e2b04a;
+    }
+
+    /* Image lightbox */
+    #lightbox { display: none; }
+    #lightbox.open { display: flex; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #090b10; }
+    ::-webkit-scrollbar-thumb { background: #a87d2a; border-radius: 4px; }
+  </style>
+</head>
+
+<body class="bg-[#090b10] text-[#e8e6e0] font-saira overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 h-16 bg-[#090b10]/80 backdrop-blur-md border-b border-yellow-800/30">
+
+    <!-- Logo -->
+    <a href="#" class="font-boldonse text-xl tracking-wide text-yellow-400 no-underline">
+      MY <span class="text-white">20</span> MOVIES
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex items-center gap-6 text-sm font-semibold tracking-widest uppercase text-[#7a7870]">
+      <a href="#movies" class="hover:text-yellow-400 transition-colors duration-200">Movies</a>
+      <a href="#about" class="hover:text-yellow-400 transition-colors duration-200">About</a>
+      <a href="#contact" class="hover:text-yellow-400 transition-colors duration-200">Contact</a>
+    </div>
+
+    <!-- Right: Photo + Hamburger -->
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-full border-2 border-yellow-400 bg-[url('/my-photo.jpg')] bg-center bg-cover bg-[#1a1d26] hover:scale-110 hover:shadow-[0_0_14px_rgba(226,176,74,0.5)] transition-all duration-200 cursor-pointer"></div>
+      <!-- Hamburger mobile -->
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 cursor-pointer p-1">
+        <span class="block w-6 h-0.5 bg-yellow-400 rounded transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-yellow-400 rounded transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-yellow-400 rounded transition-all duration-300"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 z-40 bg-[#0f1117] border-b border-yellow-800/30 flex-col items-center gap-0 md:hidden">
+    <a href="#movies" class="w-full text-center py-4 text-sm font-semibold tracking-widest uppercase text-[#7a7870] hover:text-yellow-400 hover:bg-[#161921] transition-all duration-200 border-b border-yellow-800/20">Movies</a>
+    <a href="#about" class="w-full text-center py-4 text-sm font-semibold tracking-widest uppercase text-[#7a7870] hover:text-yellow-400 hover:bg-[#161921] transition-all duration-200 border-b border-yellow-800/20">About</a>
+    <a href="#contact" class="w-full text-center py-4 text-sm font-semibold tracking-widest uppercase text-[#7a7870] hover:text-yellow-400 hover:bg-[#161921] transition-all duration-200">Contact</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section class="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center overflow-hidden bg-[url('/globe-ing.jpg')] bg-center bg-cover">
+
+    <!-- Overlays -->
+    <div class="absolute inset-0 bg-[#090b10]/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#090b10]"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center gap-4 px-6">
+
+      <span class="anim-1 text-xs tracking-[0.22em] uppercase text-yellow-400 border border-yellow-800/50 bg-yellow-400/10 px-4 py-1.5 rounded-full">
+        Alok's Personal Collection
+      </span>
+
+      <h1 class="anim-2 font-boldonse text-5xl sm:text-6xl md:text-8xl leading-none text-white">
+        MY <span class="text-yellow-400">20</span><br>MOVIES
+      </h1>
+
+      <p class="anim-3 text-sm md:text-base text-[#7a7870] max-w-md leading-relaxed">
+        Films that left a mark — handpicked across genres, ranked and reviewed personally.
+      </p>
+
+      <a href="#movies" class="anim-4 mt-2 px-8 py-3 bg-yellow-400 text-black font-bold text-sm tracking-widest uppercase rounded hover:bg-yellow-300 hover:-translate-y-0.5 transition-all duration-200">
+        Explore Movies
+      </a>
+
+      <!-- Stats row -->
+      <div class="anim-5 flex items-center gap-8 mt-4">
+        <div class="text-center">
+          <div class="font-boldonse text-2xl text-yellow-400">20</div>
+          <div class="text-xs text-[#7a7870] uppercase tracking-widest">Movies</div>
+        </div>
+        <div class="w-px h-8 bg-yellow-800/40"></div>
+        <div class="text-center">
+          <div class="font-boldonse text-2xl text-yellow-400">7</div>
+          <div class="text-xs text-[#7a7870] uppercase tracking-widest">Genres</div>
+        </div>
+        <div class="w-px h-8 bg-yellow-800/40"></div>
+        <div class="text-center">
+          <div class="font-boldonse text-2xl text-yellow-400">★</div>
+          <div class="text-xs text-[#7a7870] uppercase tracking-widest">Curated</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 bounce opacity-60">
+      <span class="text-xs tracking-widest uppercase text-[#7a7870]">Scroll</span>
+      <svg width="16" height-="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 2L8 14M8 14L3 9M8 14L13 9" stroke="#e2b04a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CATEGORY FILTER BAR
+  ════════════════════════════════════════ -->
+  <div id="movies" class="sticky top-16 z-30 bg-[#090b10]/95 backdrop-blur-sm border-b border-yellow-800/20">
+    <div class="flex items-center gap-2 px-4 md:px-10 py-3 overflow-x-auto scrollbar-none">
+      <button onclick="filterMovies('all')" class="filter-btn active flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="all">All</button>
+      <button onclick="filterMovies('true-story')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="true-story">True Story</button>
+      <button onclick="filterMovies('adventure')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="adventure">Adventure</button>
+      <button onclick="filterMovies('horror')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="horror">Horror</button>
+      <button onclick="filterMovies('series')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="series">Series</button>
+      <button onclick="filterMovies('comedy')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="comedy">Comedy</button>
+      <button onclick="filterMovies('romantic')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="romantic">Romantic</button>
+      <button onclick="filterMovies('others')" class="filter-btn flex-shrink-0 px-4 py-1.5 text-xs font-bold tracking-widest uppercase border border-yellow-800/50 text-[#7a7870] rounded-full transition-all duration-200 hover:border-yellow-400 hover:text-yellow-400" data-filter="others">Others</button>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       MOVIES LIST
+  ════════════════════════════════════════ -->
+  <main class="max-w-6xl mx-auto px-4 md:px-8 py-12 flex flex-col gap-6" id="movies-list">
+
+    <!-- MOVIE CARD TEMPLATE — repeat this for all 20 -->
+    <!-- Card 1 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="true-story">
+      <!-- Number -->
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">1</div>
+      <!-- Poster -->
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/shawshank.jpg', 'The Shawshank Redemption')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/shawshank.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <!-- Category tag -->
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">True Story</span>
+      </div>
+      <!-- Info -->
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">The Shawshank Redemption</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">1994</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 9.3</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">
+          Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. A story of hope that never gets old — this is the one film I rewatch every year.
+        </p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Drama</span>
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Prison</span>
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Hope</span>
+        </div>
+      </div>
+      <!-- Mobile number -->
+      <div class="md:hidden absolute top-3 right-3 font-boldonse text-2xl text-yellow-400/60">1</div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="true-story">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">2</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/lion.jpg', 'Lion')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/lion.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">True Story</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Lion</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">2016</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 8.0</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">
+          A five-year-old Indian boy gets lost on the streets of Calcutta, thousands of kilometers from home. 25 years later, he uses Google Earth to find his lost family. Based on a real story — genuinely emotional.
+        </p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Drama</span>
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Family</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="true-story">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">3</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/stolen.jpg', 'Stolen')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/stolen.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">True Story</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Stolen</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">2012</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 7.5</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">
+          Add your personal review here — what you felt, why it made your top 20, what scene stayed with you.
+        </p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Thriller</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="others">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">4</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/chava.jpg', 'Chava')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/chava.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">Others</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Chava</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">2025</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 8.5</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">
+          Add your personal review here — what you felt, why it made your top 20.
+        </p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Historical</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="series">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">5</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/chernobyl.jpg', 'Chernobyl')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/chernobyl.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">Series</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Chernobyl</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">2019</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 9.4</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">
+          The true story of the 1986 nuclear disaster and those who sacrificed themselves to save Europe. The most terrifying thing about Chernobyl is that it actually happened.
+        </p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Mini Series</span>
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">HBO</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cards 6–20 — same structure, change data-category, title, year, rating, description -->
+    <!-- I'm giving you 3 more as examples — rest follow same pattern -->
+
+    <!-- Card 6 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="adventure">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">6</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/movie6.jpg', 'Movie Title')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/movie6.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">Adventure</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Movie Title Here</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">Year</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 0.0</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">Your personal review here.</p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Tag</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 7 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="horror">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">7</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/movie7.jpg', 'Movie Title')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/movie7.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">Horror</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Movie Title Here</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">Year</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 0.0</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">Your personal review here.</p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Tag</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 8 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="comedy">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">8</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/movie8.jpg', 'Movie Title')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/movie8.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">Comedy</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Movie Title Here</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">Year</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 0.0</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">Your personal review here.</p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Tag</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 9 -->
+    <article class="movie-card group flex flex-col md:flex-row items-stretch gap-0 bg-[#0f1117] border border-yellow-800/20 rounded-2xl overflow-hidden hover:border-yellow-400/40 transition-all duration-300 hover:shadow-[0_4px_32px_rgba(226,176,74,0.08)]" data-category="romantic">
+      <div class="hidden md:flex items-center justify-center w-16 flex-shrink-0 font-boldonse text-4xl text-yellow-800/40 group-hover:text-yellow-400/60 transition-colors duration-300">9</div>
+      <div class="relative w-full md:w-44 h-52 md:h-auto flex-shrink-0 overflow-hidden cursor-pointer" onclick="openLightbox('/posters/movie9.jpg', 'Movie Title')">
+        <div class="w-full h-full bg-[#161921] bg-[url('/posters/movie9.jpg')] bg-center bg-cover group-hover:scale-105 transition-transform duration-500"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#e2b04a" stroke-width="1.5"/><path d="M16 13l12 7-12 7V13z" fill="#e2b04a"/></svg>
+        </div>
+        <span class="absolute top-2 left-2 text-[10px] font-bold tracking-widest uppercase bg-yellow-400 text-black px-2 py-0.5 rounded-full">Romantic</span>
+      </div>
+      <div class="flex flex-col justify-center gap-3 p-5 md:p-7 flex-1">
+        <div class="flex items-center gap-3 flex-wrap">
+          <h2 class="font-boldonse text-xl md:text-2xl text-white">Movie Title Here</h2>
+          <span class="text-xs text-[#7a7870] border border-yellow-800/30 px-2 py-0.5 rounded">Year</span>
+          <span class="text-xs text-yellow-400 font-bold">★ 0.0</span>
+        </div>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-2xl">Your personal review here.</p>
+        <div class="flex items-center gap-2 mt-1 flex-wrap">
+          <span class="text-xs bg-[#161921] border border-yellow-800/20 px-3 py-1 rounded-full text-[#7a7870]">Tag</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cards 10–20: Copy any card above, change number, data-category, title, year, rating, description -->
+    <!-- PASTE 11 more cards here with correct data-category values:
+         true-story | adventure | horror | series | comedy | romantic | others -->
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════ -->
+  <section id="about" class="max-w-6xl mx-auto px-4 md:px-8 py-16 border-t border-yellow-800/20">
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      <div class="w-32 h-32 rounded-full border-4 border-yellow-400 bg-[url('/my-photo.jpg')] bg-center bg-cover bg-[#1a1d26] flex-shrink-0 shadow-[0_0_32px_rgba(226,176,74,0.2)]"></div>
+      <div class="flex flex-col gap-3 text-center md:text-left">
+        <span class="text-xs tracking-[0.2em] uppercase text-yellow-400">About the Curator</span>
+        <h2 class="font-boldonse text-3xl text-white">Alok</h2>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-xl">
+          Full stack developer and massive film enthusiast. These 20 movies are not just watched — they've been rewatched, thought about, and recommended to everyone I know. This is my personal hall of fame.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer id="contact" class="bg-[#07090d] border-t border-yellow-800/20 mt-8">
+
+    <!-- Top footer -->
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Brand -->
+      <div class="flex flex-col gap-4">
+        <span class="font-boldonse text-2xl text-yellow-400">MY <span class="text-white">20</span> MOVIES</span>
+        <p class="text-sm text-[#7a7870] leading-relaxed max-w-xs">
+          A personal curation of the finest films and series — handpicked by Alok.
+        </p>
+        <!-- Social icons -->
+        <div class="flex items-center gap-3 mt-2">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-yellow-800/40 flex items-center justify-center text-[#7a7870] hover:border-yellow-400 hover:text-yellow-400 transition-all duration-200">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter/X" class="w-9 h-9 rounded-full border border-yellow-800/40 flex items-center justify-center text-[#7a7870] hover:border-yellow-400 hover:text-yellow-400 transition-all duration-200">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" class="w-9 h-9 rounded-full border border-yellow-800/40 flex items-center justify-center text-[#7a7870] hover:border-yellow-400 hover:text-yellow-400 transition-all duration-200">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col gap-4">
+        <span class="text-xs tracking-[0.2em] uppercase text-yellow-400 font-bold">Quick Links</span>
+        <div class="flex flex-col gap-2">
+          <a href="#" class="text-sm text-[#7a7870] hover:text-yellow-400 transition-colors duration-200 w-fit">Home</a>
+          <a href="#movies" class="text-sm text-[#7a7870] hover:text-yellow-400 transition-colors duration-200 w-fit">All Movies</a>
+          <a href="#about" class="text-sm text-[#7a7870] hover:text-yellow-400 transition-colors duration-200 w-fit">About</a>
+          <a href="#contact" class="text-sm text-[#7a7870] hover:text-yellow-400 transition-colors duration-200 w-fit">Contact</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-4">
+        <span class="text-xs tracking-[0.2em] uppercase text-yellow-400 font-bold">Contact</span>
+        <div class="flex flex-col gap-3">
+          <a href="mailto:your@email.com" class="flex items-center gap-2 text-sm text-[#7a7870] hover:text-yellow-400 transition-colors duration-200">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            your@email.com
+          </a>
+          <a href="#" class="flex items-center gap-2 text-sm text-[#7a7870] hover:text-yellow-400 transition-colors duration-200">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.11 18.1.123 18.117a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            Discord
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-yellow-800/20 px-4 md:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 max-w-6xl mx-auto">
+      <span class="text-xs text-[#7a7870]">© 2025 Alok. All rights reserved.</span>
+      <span class="text-xs text-[#7a7870]">Made with <span class="text-yellow-400">♥</span> using Tailwind CSS + Vite</span>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════
+       IMAGE LIGHTBOX
+  ════════════════════════════════════════ -->
+  <div id="lightbox" class="fixed inset-0 z-[999] bg-black/90 backdrop-blur-sm items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#161921] border border-yellow-800/40 flex items-center justify-center text-[#7a7870] hover:text-yellow-400 hover:border-yellow-400 transition-all duration-200 text-xl font-bold">✕</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain">
+    <p id="lightbox-title" class="mt-4 text-center font-boldonse text-xl text-white"></p>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════ -->
+  <script>
+    // ── Hamburger ──
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      });
+    });
+
+    // ── Category Filter ──
+    function filterMovies(category) {
+      const cards = document.querySelectorAll('.movie-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update active button
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === category) btn.classList.add('active');
+      });
+
+      // Show/hide cards
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden-card');
+        } else {
+          card.classList.add('hidden-card');
+        }
+      });
+    }
+
+    // ── Lightbox ──
+    function openLightbox(src, title) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-title').textContent = title;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lightbox-img').src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Close lightbox on background click
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

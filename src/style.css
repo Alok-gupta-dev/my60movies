@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-boldonse: "Boldonse", sans-serif;
+  --font-mono: "Intel One Mono", monospace;
+  --font-slab: "Roboto Slab", serif;
+  --font-saira: "Saira", sans-serif;
+}
