@@ -48,3 +48,21 @@ window.addEventListener('scroll', () => {
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+   function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src
+      const lb = document.getElementById('lightbox')
+      lb.classList.remove('hidden')
+      lb.classList.add('flex')
+      document.body.style.overflow = 'hidden'
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox')
+      lb.classList.add('hidden')
+      lb.classList.remove('flex')
+      document.body.style.overflow = ''
+    }
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox()
+    })
