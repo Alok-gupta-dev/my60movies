@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Trailer Modal</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-900 flex items-center justify-center min-h-screen">
+
+    <!-- Watch Trailer Button -->
+    <button
+        data-trailer="PLl99DlL6b4"
+        onclick="openTrailer(this)"
+        class="trailer-btn mt-3 self-start flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="12"
+             height="12"
+             viewBox="0 0 24 24"
+             fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+
+        Watch Trailer
+    </button>
+
+    <!-- Trailer Modal -->
+    <div id="trailerModal"
+         class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[9999] p-4">
+
+        <!-- Close Button -->
+        <button
+            onclick="closeTrailer()"
+            class="absolute top-5 right-5 text-white text-5xl leading-none hover:text-yellow-400 transition">
+            &times;
+        </button>
+
+        <!-- Video -->
+        <div class="relative w-full max-w-5xl aspect-video">
+            <iframe
+                id="trailerFrame"
+                class="w-full h-full rounded-lg"
+                src=""
+                title="Movie Trailer"
+                frameborder="0"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+<script>
+const trailerModal = document.getElementById('trailerModal');
+const trailerFrame = document.getElementById('trailerFrame');
+
+function openTrailer(button) {
+    const videoId = button.dataset.trailer;
+
+    trailerFrame.src =
+        `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+    trailerModal.classList.remove('hidden');
+    trailerModal.classList.add('flex');
+
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTrailer() {
+    trailerModal.classList.add('hidden');
+    trailerModal.classList.remove('flex');
+
+    trailerFrame.src = '';
+
+    document.body.style.overflow = '';
+}
+
+// Close when clicking outside video
+trailerModal.addEventListener('click', function (e) {
+    if (e.target === trailerModal) {
+        closeTrailer();
+    }
+});
+
+// Close with ESC key
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        closeTrailer();
+    }
+});
+</script>
+
+</body>
+</html>
