@@ -23,18 +23,12 @@
     </a></div>
     <div class="h-18 w-18 bg-[url('/my-photo.jpg')] bg-center bg-cover border-1 border-amber-50 rounded-4xl" onclick="openLightbox('/my-photo.png')"></div>
          </nav>
-         <div class="relative z-10 flex flex-col items-center gap-4 px-6"><h1 class="anim-2 font-boldonse text-5xl sm:text-6xl md:text-8xl leading-none text-white">
+         <div class="relative z-10 flex flex-col items-center gap-2 px-6"><h1 class="anim-2 font-boldonse text-5xl sm:text-6xl md:text-8xl leading-none text-white">
         MY <span class="text-yellow-400">60</span><br>MOVIES
       </h1></div>
       <!-- Search Slide-in Bar -->
-<div id="search-slide" class="fixed top-0 left-0 right-0 z-[1000] bg-[#0d1117] border-b border-yellow-800 px-4 py-3 flex items-center gap-3 -translate-y-full transition-transform duration-300 ease-in-out">
+<div id="search-slide" class="fixed top-0 left-0 right-0 z-[1000] bg-[#0d1117] border-b border-yellow-800 px-3 py-3 flex items-center gap-2 -translate-y-full transition-transform duration-300 ease-in-out">
   <i class="ti ti-search text-yellow-400 text-xl"></i>
-  <input 
-    id="search-input"
-    type="text" 
-    placeholder="Search movies..." 
-    class="flex-1 bg-transparent border-none outline-none text-white text-base font-saira"
-  />
   <button  onclick="window.open('https://vidbox.pages.dev/', '_blank')" aria-label="Close search" class="p-1 cursor-pointer bg-transparent border-none">
     <i class="ti ti-x text-gray-400 text-xl"></i>
   </button>
@@ -58,7 +52,7 @@
     </header>
 
     <!-- Filter Buttons -->
-    <div class="w-full bg-[#0f0f0f] py-5 px-4 flex flex-wrap items-center justify-center gap-3 sticky top-16 z-40 border-b border-yellow-900/40" id="filter-container">
+    <div class="w-full bg-[#0f0f0f] py-5 px-3 flex flex-wrap items-center justify-center gap-3 sticky top-16 z-40 border-b border-yellow-900/40" id="filter-container">
       <button data-filter="All" class="filter-btn active bg-yellow-400 text-gray-900 border-2 border-yellow-400 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all">All</button>
       <button data-filter="True Story" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">True Story</button>
       <button data-filter="Adventure" class="filter-btn bg-transparent text-yellow-100 border-2 border-yellow-800 px-5 py-2 text-base font-bold font-saira rounded-sm cursor-pointer transition-all hover:border-yellow-400 hover:text-yellow-400">Adventure</button>
@@ -72,7 +66,7 @@
 
       <!-- ===== TRUE STORY — 10 ===== -->
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">1</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -84,7 +78,7 @@
            <button
       data-trailer="PLl99DlL6b4"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -94,7 +88,7 @@
     </button>
     <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -109,7 +103,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">2</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/x3OsLk7gdrgEP16LLeMtFr_XT4lOUsTXukRRdaj8N1E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vZi9mMC9M/aW9uXyUyODIwMTZf/ZmlsbSUyOS5wbmc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -121,7 +115,7 @@
            <button
       data-trailer="Y7Bquwr8mQE"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -132,7 +126,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">3</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/9WGJlYsRWRa1IV9YJqxhd_ZghXsEeaWf5xgjF-8MXeI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxRTJkZHpHejZM/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -144,7 +138,7 @@
            <button
       data-trailer="XrjJbl7kRrI"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -154,7 +148,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -169,7 +163,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">4</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/gDfn2hg6BvM2exvZLI_FiGiJdu_R3OQZenxRAfPgjdY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5HUmtPVFZq/T0RndE5UQm1aUzAw/TURRM0xXRTNaalF0/TTJaaU5EUTNPV0pr/TWpNMlhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -181,7 +175,7 @@
            <button
       data-trailer="ISORfez27og"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -191,7 +185,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -206,7 +200,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">5</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/Z2P0mwfQznCLmSyPz9EZcBYE52zvnfPQXC8_BZx2O0o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/Ny83Yi9NYXRrYV9L/aW5nXyUyOFRWX3Nl/cmllcyUyOS5qcGcv/NTEycHgtTWF0a2Ff/S2luZ18lMjhUVl9z/ZXJpZXMlMjkuanBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -218,7 +212,7 @@
            <button
       data-trailer="9T1oy0y8-zY"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -228,7 +222,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -243,7 +237,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">6</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/j4JEV5INm6YJIMgfS0omUiFQFE3-kdHfBDYb3iY1g8k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mci53/ZWIuaW1nNC5hY3N0/YS5uZXQvY18zMTBf/NDIwL3BpY3R1cmVz/LzIxMC80MTUvMjEw/NDE1NjhfMjAxMzA5/MTkxMDA4NTQ0OS5q/cGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -255,7 +249,7 @@
            <button
       data-trailer="z02Ie8wKKRg"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -265,7 +259,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -280,7 +274,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">7</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/arr_vgVO2PqtuYCQTWFibgJ9HB8vpSww9i5ziCNo3fs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2E1L2Zh/LzE2L2E1ZmExNjk5/ZjA3ZDE5MTM4N2Ex/ZTY4NGI2YzgxMWQw/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -292,7 +286,7 @@
            <button
       data-trailer="lB95KLmpLR4"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -302,7 +296,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -317,7 +311,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">8</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/DzGR8MTaUERI4_1b_5MI0vCfEqXBZn6ED8g-rX2HpXk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lY2Ru/LnRlYWNoZXJzcGF5/dGVhY2hlcnMuY29t/L3RodW1iaXRlbS9U/aGUtSW1pdGF0aW9u/LUdhbWUtVmlld2lu/Zy1Xb3Jrc2hlZXQt/d2l0aC1LZXktODAy/MzYyNC0xNjgxMzc3/MTY3L29yaWdpbmFs/LTgwMjM2MjQtMS5q/cGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -329,7 +323,7 @@
            <button
       data-trailer="nuPZUUED5uk"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -339,7 +333,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -354,7 +348,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">9</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/HXirHf4R16rvu-ITSZixpMzCkSYOD429Y8Zmf91-AP8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9kL2QwL1Ny/aW5pdmFzYV9SYW1h/bnVqYW4tQWRkLl9N/U19hOTRfdmVyc2lv/bjJfJTI4Y3JvcHBl/ZCUyOS5qcGcvNTEy/cHgtU3Jpbml2YXNh/X1JhbWFudWphbi1B/ZGQuX01TX2E5NF92/ZXJzaW9uMl8lMjhj/cm9wcGVkJTI5Lmpw/Zw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -366,7 +360,7 @@
            <button
       data-trailer="-yIWNMLchBo"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -378,7 +372,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="True Story">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="True Story">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">10</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/ZcU5qOGG7PQRxeIVpQNuAHeaDCiseDt6vPi94kyOHeQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L2FjZS9zdGFuZGFy/ZC85NzYvY3BzcHJv/ZHBiLzM4RTUvcHJv/ZHVjdGlvbi9fOTMz/NTY1NDFfbWVkaWFp/dGVtOTMzNTY1Mzgu/anBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -390,7 +384,7 @@
            <button
       data-trailer="jMfvlh0tjyo"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -400,7 +394,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -417,7 +411,7 @@
 
       <!-- ===== ADVENTURE — 10 ===== -->
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">11</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/ILI-WcE9nwcjkpSY4Nxq2FBmTvnB8dvdQb8yBx8wxVA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJjLzlk/L2UzLzJjOWRlM2U2/MGIyNmQ3MTZkMzU4/ZGU1NzQ4NGQ2MWI1/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -429,7 +423,7 @@
            <button
       data-trailer="EXeTwQWrcwY"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -439,7 +433,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -454,7 +448,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">12</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/riNi1T_6PmpWK79oe98yZX66flQ-ugQvKdjNmRz62fI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qll6ZGpNREF4/WkdJdE1qSTJNeTAw/T0RBMUxUbGtOekl0/T1dGak1EVTVaREps/WVdZM1hrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -466,7 +460,7 @@
            <button
       data-trailer="zSWdZVtXT7E"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -476,7 +470,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -491,7 +485,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">13</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/F3MIbLYceAeld6HxR_92j3FwEnXYQYXZ0H2PpmCH5RE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2lu/Y2VwdGlvbi9pbWFn/ZXMvOS85MS9JbmNl/cHRpb25fcG9zdGVy/LmpwZy9yZXZpc2lv/bi9sYXRlc3Qvc2Nh/bGUtdG8td2lkdGgt/ZG93bi8yNTA_Y2I9/MjAxNDA2MTIwMTA4/MTQ')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -503,7 +497,7 @@
            <button
       data-trailer="YoHD9XEInc0"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -513,7 +507,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -528,7 +522,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">14</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/4P93a-JeIO-m5LXNB9zzxjevGtptDRZ0Ae347p1Fvf4/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/LzIwMjAvcG9zdGVy/cy90ZW5ldC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -540,7 +534,7 @@
            <button
       data-trailer="AZGcmvrTX9M"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -550,7 +544,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -565,7 +559,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">15</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/VtXX4M_Iq3hfMOpmFvlmb2YKkOVfvGcjAvo9TaFQzG8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kbm0u/bmZseGltZy5uZXQv/YXBpL3Y2L0ZkNkhS/UjlhUjQyaDd0OHd2/emVYdEZyeVdLay9B/QUFBUVREbVlxc1hu/NWU4TjA4MUFqUF9x/Q2h1ZEg2QzRtV0JK/djk5OHVndllaWU5W/YmNoQ1pvRXRuS3Ix/OThKcXFFaWJ3Wnh2/a1NlOFhVcjlwa1ow/LUJxUkttVjdOVlVa/cEo2S3ItaGVLMV92/MFZxZ2phTllTUWRN/MGNybWJUclE5bnFL/aW9XeEtmLUdTR1BV/akZEdm5SbWdMLWhL/MTRKYXpTTnhwcEdS/Q0tiRGFrbWhMMWRI/NW1GbFRKTUlyUEFn/bHl3bzRSMEtaMzc3/TWI1Wkk4SVhYWUEt/UHI5SkM2cEVoTTBC/TE95bl9mQlpMd3JQ/UHZJT0pRLmpwZz9y/PTFiMQ')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -577,7 +571,7 @@
            <button
       data-trailer="kgv8jf_8dm0"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -587,7 +581,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -602,7 +596,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">16</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/dWhDtiiVhmsAb8eoEknTTUkK0kr4N0lQAB3IvCVvug8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk1tTTFaVGM1/WlRZdE9UTTJNeTAw/TWpCbUxXRTVOemt0/WXpreVl6ZGxZV0Uz/WkRBelhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -614,7 +608,7 @@
            <button
       data-trailer="3v4K4tRZypM"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -624,7 +618,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -639,7 +633,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">17</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/R5ilM0kmRUoJfoLDVM3lII14YUxUWDP6-h3G7OS9cpE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk9UaG1NVFpq/TVRVdE1URTVPQzAw/T1RBMExXSXpOamt0/WlRBNU5UQm1aRGM0/TWprMFhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -651,7 +645,7 @@
            <button
       data-trailer="ALaTpllzI50"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -661,7 +655,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -676,7 +670,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">18</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/NvwKnw7S8TnhTwr-_ICpAH8Q8ErR94nszuSFsEyUXo4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzVmL2Iw/L2IzLzVmYjBiM2Yz/ZDQzYTgzYjdjOGEy/ODAyYzliOGU4ZjIz/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -688,7 +682,7 @@
            <button
       data-trailer="8uaNYpe5LJ0"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -698,7 +692,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -713,7 +707,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">19</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/j5cdYvGipv8rp3VxeDSS5FIpEgG1BD-7kEczCnpTUWc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMzA2/MTkwNS5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -725,7 +719,7 @@
            <button
       data-trailer="XZG1FzyB8DI"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -735,7 +729,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -750,7 +744,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Adventure">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Adventure">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">20</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/NrQUNgOs952EKYdaBkerPxmyYYCAJV3rNpsBGNcqXfs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vNS81Ny9M/aWZlX29mX1BpXzIw/MTJfUG9zdGVyLmpw/Zw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -762,7 +756,7 @@
            <button
       data-trailer="ODwQEHi5eSI"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -776,7 +770,7 @@
 
       <!-- ===== ROMANTIC — 10 ===== -->
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">21</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/-yopPvhOkbZPuIf75GIxV_3Pm45COYrG_VQH5-5wwGE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYvYXYt/bWVkaWEvbW92aWVz/L2gvMi8zL2RpbHdh/bGUtZHVsaGFuaWEt/bGUtamF5ZW5nZS1v/cmlnaW5hbC1pbWFk/aGVjYmhibnRoZ2Ji/LmpwZWc_cT03MCZj/cm9wPWZhbHNl')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -788,7 +782,7 @@
            <button
       data-trailer="jMiGuA1ZeWE"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -800,7 +794,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">22</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/AkYeRpu8dXivVHFvwWT1Q7vh7xarakWv8qv-2ljmnJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvdGl0/YW5pYy1hZXN0aGV0/aWMtamFjay1hbmQt/cm9zZS1qMzF5ODdj/eXk5NWpiMXRrLmpw/Zw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -812,7 +806,7 @@
            <button
       data-trailer="kVrqfYjkTdQ"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -822,7 +816,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -837,7 +831,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">23</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/kJBt2VhmfppMI-3aVkstQt-bj3kxIbi31EuHvnCUGwE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva3Fn/eWhlODAvcmVnaW9u/YWxib29rcy85LzYv/bi90aGUtbm90ZWJv/b2stZW5nbGlzaC1w/YXBlcmJhY2stc3Bh/cmtzLW5pY2hvbGFz/LW9yaWdpbmFsLWlt/YWc0Z3lueTd1Nmdo/bXQuanBlZz9xPTcw/JmNyb3A9ZmFsc2U')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -849,7 +843,7 @@
            <button
       data-trailer="BjJcYdEOI0k"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -859,7 +853,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -874,7 +868,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">24</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/ZyZAsZuw2RcjaIIPSyv0-RYbsSJ0s_r1acOkzxLWupI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlptUTVaalps/TXpNdE9EQTFaUzAw/TlROaUxXSXpPVFl0/T1RReVlqUTJZV1F4/TVRBMVhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -886,7 +880,7 @@
            <button
       data-trailer="zRlkHu-R7yI"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -896,7 +890,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -911,7 +905,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">25</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/aS6q5s5wB-VwLSvqpoOMt6U-hi2WL608Ak7zQpIudrk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmlsbWliZWF0/LmNvbS9waC1iaWcv/MjAyNS8wOS9ob21l/Ym91bmQxNzU4ODg1/OTQ5XzIuanBlZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -923,7 +917,7 @@
            <button
       data-trailer="zRlkHu-R7yI"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -933,7 +927,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -948,7 +942,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">26</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/A4GXM6-Kw56qi8t1rlj8JACWCC8FRHlUvbvo7v6tByQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vZi9mNy9Q/aG90b2dyYXBoX2Zp/bG1fcG9zdGVyLmpw/Zw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -960,7 +954,7 @@
            <button
       data-trailer="LwOGIlpPqek"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -970,7 +964,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -985,7 +979,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">27</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/aKtCfK3PtHp-MXT9WkrjqZNK2tD1UxFn-_Y3iq827rI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2E2Lzli/LzYxL2E2OWI2MWM5/ODJmZTZhMTEyYjY1/NWYxM2UxZWNhYjdm/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -997,7 +991,7 @@
            <button
       data-trailer="wUEsWkus-bs"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1007,7 +1001,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1022,7 +1016,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">28</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/dbRUo-MMy9KUYPHP_N-ybvbthr4jPTC2Ojcm41hNRY0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk56Z3hNekV4/TXpVd05WNUJNbDVC/YW5CblhrRnRaVGN3/TURjMk1qVXdOQUBA/Ll9WMV9RTDc1X1VZ/MjgxX0NSMiwwLDE5/MCwyODFfLmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1034,7 +1028,7 @@
            <button
       data-trailer="CIrlJDtUpac"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1046,7 +1040,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">29</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/ZVVI1cOGbCeKJMNjai_IhZT8bOASKHFmKsZEWq_v5Lc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YWNtb2Rhc2kuaW4v/YW1kYi9pbWFnZXMv/bW92aWUvdzMwMC9j/L24vTDhyRlBDWTcy/RkxpLndlYnA')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1058,7 +1052,7 @@
            <button
       data-trailer="EajIlG_OCvw"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1068,7 +1062,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1083,7 +1077,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Romantic">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Romantic">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">30</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/n2ByTJLdpxYyOmfzqSWWocVqjcLnP35_2h8FR-7hVcg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5qVm1NVGxr/TkdZdFlUTTJPQzAw/WWpjMkxXSXlZbVF0/TURZNFptVTFNV1Js/TWpBM1hrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1095,7 +1089,7 @@
            <button
       data-trailer="/a3wk71jST38"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1109,7 +1103,7 @@
 
       <!-- ===== MORALS — 10 ===== -->
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">31</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/8-oj6p4mHMTWX8pztw6e7MOHaxKYb3ehNkkZnTXWVZE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mYXN0/bHktczMuYWxsbW92/aWUuY29tL2l2YS9t/b3ZpZS8yNzQyLzMw/MC8yNzQyLmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1121,7 +1115,7 @@
            <button
       data-trailer="bLvqoHBptjg"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1131,7 +1125,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1146,7 +1140,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">32</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/mDngIiZHcMb6iSHPrGr-ZmFZzAqRpEEreO8CGJrkrSA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmlsbXNjaXR5Lmlu/L3VwbG9hZHMvbW92/aWVzLzQ3MzMuanBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1158,7 +1152,7 @@
            <button
       data-trailer="/Fm0FSP0G22M"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1168,7 +1162,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1183,7 +1177,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">33</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/fmDmJondql4WyhIYfCtaxY3HeCyB86ovzqn4vWf2SKw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/N2FlMGNmZWQ1Mzlh/MDAxY2M0MjFhN2Uv/NjgwYzk1Zjc0OWM3/MjAwMDZjZjg2YjI4/X0thbnRhcmEuYXZp/Zg')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1195,7 +1189,7 @@
            <button
       data-trailer="m-5ck3BuT1o"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1205,7 +1199,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1220,7 +1214,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">34</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/TEo8Aw8lzS-p8tcF0DkiFLWY3rz0zeVvN0_EFNKWV6Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50aGVtb3ZpZWRi/Lm9yZy90L3AvdzMw/MF9hbmRfaDQ1MF9m/YWNlLzhHeHY4Z1NG/Q1UwWEdEeWtFR3Y3/elIxbjJ1YS5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1232,7 +1226,7 @@
            <button
       data-trailer="uYPbbksJxIg"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1242,7 +1236,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1257,7 +1251,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">35</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/bN2-4t4I_tpRq-m8-0C1ZPi8TFbjOuLfmuueWreyBaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJlL2I1/L2U3LzJlYjVlN2Jm/Njc5ZThkZjBkNzRi/OTFkMjJkZThiMTVh/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1269,7 +1263,7 @@
            <button
       data-trailer="T5IligQP7Fo"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1279,7 +1273,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1294,7 +1288,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">36</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/O379FUnXIvI4oBAkERW6Fk4fZHfTRLvUZZNIkMMs80M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50aGVtb3ZpZWRi/Lm9yZy90L3AvdzIy/MF9hbmRfaDMzMF9m/YWNlL2pTemlpb1N3/UFZyT3k5WW93M1ho/V0lCRGpxMS5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1306,7 +1300,7 @@
            <button
       data-trailer="qtRKdVHc-cE"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1316,7 +1310,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1331,7 +1325,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">37</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/bW2CU-9ebqfWnh8E8tV73p8nK4_WOotyu0Z7NRrefZI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/eW9ya3NmcmFtaW5n/LmNvLnVrL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzAzL0Rl/YWQtUG9ldHMtU29j/aWV0eS0yMTJ4MzAw/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1343,7 +1337,7 @@
            <button
       data-trailer="/ye4KFyWu2do"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1353,7 +1347,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1368,7 +1362,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">38</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/r0iOwRK2-b1RAXSt8wPdYMZAR0QeznDcHSdv4D-QYE0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWlyYW1heC5jb20v/YXNzZXRzLzcyNl9H/b29kV2lsbEh1bnRp/bmdfQ2F0YWxvZ19Q/b3N0ZXItQkJfdjJf/QXBwcm92ZWQucG5n')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1380,7 +1374,7 @@
            <button
       data-trailer="PaZVjZEFkRs"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1390,7 +1384,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1405,7 +1399,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">39</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/dl7FwY5o6I30-3D0GoP6_g5r42DUtMev24y3U7zOTaU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlpqSTFaak0z/TmpVdFlUYzFOaTAw/T0RKbUxXSTVZalF0/TVdaaVpUQXlOVEZp/WkdZMVhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1417,7 +1411,7 @@
            <button
       data-trailer="da7lKeeS67c"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1427,7 +1421,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1442,7 +1436,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Morals">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Morals">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">40</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/ENzoa9bc_Ev_Nqxds1EsgYKlMIs55CDzav5HDltvk9Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk1ETXlaakZt/WlRjdE5EQXhZaTAw/TVdNM0xXSmlZbUl0/TTJWaE5XWmlNMkl3/TmpObFhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1454,7 +1448,7 @@
            <button
       data-trailer="hs3w32RG8L8"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1464,7 +1458,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1481,7 +1475,7 @@
 
       <!-- ===== COMEDY — 10 ===== -->
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">41</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/3tTflGH9OEE2L4RssfxKfBHn1R7IbnbV-sJIuFokoXg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFMRVI3NlVUMkwu/anBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1493,7 +1487,7 @@
            <button
       data-trailer="VwWbGHHHVIQ"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1505,7 +1499,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">42</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/Pc9sJ-2W2EaOkVhJU5Zv-AhnHNLE5FitzzXHEMsDPvc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlpXVTNPVEV6/T0RndE1XWTRPUzAw/TjJOa0xXSmxOR1F0/TVdaaFpESm1PRFF3/TjJFNVhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1517,7 +1511,7 @@
            <button
       data-trailer="LKNHVDPKy7g"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1529,7 +1523,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">43</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/fdOfOJ3qjwD_c4qRkn1XzuGOUKSslvxnpxrtkQm9KZQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk56YzRaV1Ez/Tm1ZdE9ERTBOeTAw/WVRRNExUbGtaV0l0/TlRCa01HUTBNbVV3/TW1KbFhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1541,7 +1535,7 @@
            <button
       data-trailer="/pq4H0rgiXlQ"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1553,7 +1547,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">44</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/EqjYNAB4f28MunQ6qM5KPa7Y40p5p9ZiZfpVKo0K7RA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5HWXlZMkk1/TXprdE1EZzJNQzAw/TnpjNExXSXdObVl0/TWpnM056RTFPRFF5/TURsbFhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1565,7 +1559,7 @@
            <button
       data-trailer="mW0G9W4ZE1c"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1577,7 +1571,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">45</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/uCdW0RDA2qoHcWCk9ezvWIGz2WNLXfTcck1IAUS25Qs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL21v/dmllcy9pbWFnZXMv/bW9iaWxlL3RodW1i/bmFpbC94bGFyZ2Uv/c29vcmFyYWktcG90/dHJ1LWV0MDAxMDA4/NDgtMjUtMDgtMjAy/MC0xMS00OS0xMC5q/cGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1589,7 +1583,7 @@
            <button
       data-trailer="dyzraT_np8w"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1599,7 +1593,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1614,7 +1608,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">46</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/mjex2pj6xdY_vKWMfo9eCNtPcknMmAlCNcm4Axz0zO4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQ3MjA0/NzIuanBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1626,7 +1620,7 @@
            <button
       data-trailer="7ykeq72RXK8"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1637,7 +1631,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">47</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/7cRIOIDzE95E1ptzT45wlnwdXP_TC3--K1ffNV1aQWc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvOTU0/NzAzMy5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1649,7 +1643,7 @@
            <button
       data-trailer="AjAe_Q1WZ_8"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1659,7 +1653,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1674,7 +1668,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">48</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/K-RuNOYsTGVrOTZFPGCi9Ok4o13e9b8PMciu4UiCMLg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZGlzdHJpY3QuaW4v/bW92aWVzLWFzc2V0/cy9pbWFnZXMvY2lu/ZW1hL2RodXJhbmRy/LWNvdi1lci0zZDY0/NzRlMC0wMGNmLTEx/ZjEtYmYyNC02MWRm/YzVjYTRhZTguanBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1686,7 +1680,7 @@
            <button
       data-trailer="NHk7scrb_9I"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1696,7 +1690,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1711,7 +1705,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">49</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/DRW3BfReFc35Lx-4BzWY6tfzRk37RoSGkGHRdsft2M4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZGlzdHJpY3QuaW4v/bW92aWVzLWFzc2V0/cy9pbWFnZXMvY2lu/ZW1hL19HYWxsZXJ5/LVJlY292ZXJlZC0y/MmQ4NWJhMC1lYTNi/LTExZjAtODJlMC1j/N2E0YzY3NjBlMmIu/anBnP2ltPVJlc2l6/ZSx3aWR0aD0zMjA')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1723,7 +1717,7 @@
            <button
       data-trailer="R4wiXj9NmEE"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1733,7 +1727,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1748,7 +1742,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Comedy">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Comedy">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">50</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/hfCTByPyaXq1zd5A7GInTNs5s7eZ5tYinqTH6TDctMo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtaW4uYm1zY2Ru/LmNvbS9pZWRiL21v/dmllcy9pbWFnZXMv/bW9iaWxlL3RodW1i/bmFpbC94bGFyZ2Uv/c2hhYXBpdC1ldDAw/MDAzOTYyLTI0LTAz/LTIwMTctMTktNTYt/MjkuanBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1760,7 +1754,7 @@
            <button
       data-trailer="71P0vSkj7yA"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1774,7 +1768,7 @@
 
       <!-- ===== SERIES — 10 ===== -->
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">51</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/SxulDFj0vGLkPUZi-BdgQJDLWM9Wo2tK1k8EGa5heXs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk1tTmtNV1pt/TldRdE5qbGpOaTAw/WVRVNExUZzBaVEV0/WTJVME9UazBNbUkz/TlRObVhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1786,7 +1780,7 @@
            <button
       data-trailer="_InqQJRqGW4"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1796,7 +1790,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1811,7 +1805,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">52</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/v1W37p7dOO2XVRMSiwNPHZ4nWbqgahiwP_262jevOY8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzdmLzAx/L2E5LzdmMDFhOTlh/MzQzNTI2YzgyM2Iw/NGYwODdjNDY0MzBh/LmpwZw')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1823,7 +1817,7 @@
            <button
       data-trailer="9N3cFoLFjvw"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1833,7 +1827,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1848,7 +1842,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">53</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/_vlJlGXyiCwZVjSrZmy-KFD6VQ2N4kmCvDOMVDZzuk4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDF4UmpLRkhaSkwu/anBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1860,7 +1854,7 @@
            <button
       data-trailer="s9APLXM9Ei8"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1870,7 +1864,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1885,7 +1879,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">54</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/8xudJgCvJWvcpIS47KLG4RwtKvJNiObMRth0yAZVr7g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC80LzYv/MC8yMjgxOC0yODgw/eDE4MDAtZGVza3Rv/cC1oZC1icmVha2lu/Zy1iYWQtYmFja2dy/b3VuZC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1897,7 +1891,7 @@
            <button
       data-trailer="HhesaQXLuRY"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1907,7 +1901,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1922,7 +1916,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">55</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/l5ItEWqQw56wnEhuJdyXxqRzw3-ccLaRsJSrNTr5n7c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvdnlhY2g0/bzU1dmpnMS5qcGVn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1934,7 +1928,7 @@
            <button
       data-trailer="fVQUcaO4AvE"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1944,7 +1938,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1959,7 +1953,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">56</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/lHmRl-f_F6rkBF90PCsehAtgwvM3AP7xd14XeBzjK0E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5EQXdORGxq/TldFdE5XRTFaaTAw/WWpGbExXRXpNMlV0/WTJFM1pUTTFNVGN4/TVRjeVhrRXlYa0Zx/Y0djQC5qcGc')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -1971,7 +1965,7 @@
            <button
       data-trailer="pDHqAj4eJcM"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -1981,7 +1975,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -1996,7 +1990,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">57</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/CT4-a2reQrwOxjJDpBlUd0VSUeML4dDhqq4Jq-LuINg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF1MVE0RnYrWkwu/anBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -2008,7 +2002,7 @@
            <button
       data-trailer="F-eMt3SrfFU"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -2018,7 +2012,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -2033,7 +2027,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">58</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/IxJg-oXrJXfzOzpYkD3fEmghkJWGWbHizfDRSRy5nD8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuanVzdHdhdGNo/LmNvbS9wb3N0ZXIv/MzAxODU0NzI2L3Mz/MzIvc2Vhc29uLTgu/anBn')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -2045,7 +2039,7 @@
            <button
       data-trailer="cUnkjEIW2-o"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -2055,7 +2049,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -2070,7 +2064,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6 border-b border-neutral-800" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6 border-b border-neutral-800" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">59</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/cfB9gbNs2Hp3nrCkTcuyauVdAENE1Wwmy7JGVNHBJYM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/dGFza2FyZWUtdGhl/LXNtdWdnbGVycy13/ZWItYS1kZWNlbnQt/d2F0Y2gtdjAtcGYy/NzNubW1lYmRnMS5q/cGVnP3dpZHRoPTY0/MCZjcm9wPXNtYXJ0/JmF1dG89d2VicCZz/PWM1YTg1MGQ1MWZj/ZmY4MDYzYjBlYjE3/YmQ5MmFmYzhiOGZk/NTFmN2I')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -2082,7 +2076,7 @@
            <button
       data-trailer="/gKhfbEpM45E"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -2092,7 +2086,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -2107,7 +2101,7 @@
         </div>
       </section>
 
-      <section class="movie-card flex flex-row items-start gap-4 sm:gap-6 py-5 px-4 sm:px-6" data-category="Series">
+      <section class="movie-card flex flex-row items-start gap-2 sm:gap-6 py-5 px-3 sm:px-6" data-category="Series">
         <div class="text-5xl sm:text-6xl font-black text-neutral-600 font-roboto-slab w-12 shrink-0 leading-none mt-1">60</div>
         <div class="h-48 w-32 sm:h-56 sm:w-40 shrink-0 bg-[url('https://imgs.search.brave.com/5fPuGF-3tUsu6qzZrpxFjdQYvBa4-xgaVpsALkr6u_Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZGlzcGxhdGUuY29t/L2FydHdvcmsvMjAy/Mi0wNC0yMS80ODU5/MTdiZDRlZjZmNDZk/MjU2MWM0M2I3OWVh/NjVkZF83YTdkMTEx/ZWU5MDcwMTBhMTBk/ZTJlZDU4ZDgyNDc2/Zi5qcGc_c3BlZWRz/aXplPXdfNjgx')] bg-cover bg-center rounded-md"></div>
         <div class="flex-1 flex flex-col gap-2 pt-1">
@@ -2119,7 +2113,7 @@
            <button
       data-trailer="b9EkMc79ZSU"
       onclick="openTrailer(this)"
-      class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+      class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -2129,7 +2123,7 @@
     </button>
      <button
   onclick="window.open('https://vidbox.pages.dev/', '_blank')"
-  class="trailer-btn mt-3 flex items-center gap-2 px-4 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
+  class="trailer-btn mt-3 flex items-center gap-2 px-3 py-1.5 border border-neutral-600 text-neutral-400 text-xs font-saira font-semibold uppercase tracking-wider rounded-sm hover:border-yellow-400 hover:text-yellow-400 transition-all cursor-pointer bg-transparent w-fit">
 
   <svg xmlns="http://www.w3.org/2000/svg"
        width="12"
@@ -2146,14 +2140,13 @@
 
     </main>
 
-    <footer class="bg-[#0F111E] py-10 px-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-800">
-      <div class="flex flex-col gap-1">
-        <span class="font-boldonse text-yellow-400 text-lg tracking-wide">MY <span class="text-white">60</span> MOVIES</span>
-        <span class="text-neutral-500 text-sm font-saira tracking-wider">by Alok Gupta</span>
-      </div>
-      <div class="h-14 w-14 rounded-full border-2 border-yellow-800 bg-[url('/my-photo.jpg')] bg-center bg-cover"></div>
-    </footer>
-
+    <footer class="bg-[#0F111E] py-12 px-8 flex flex-col items-center justify-between gap-2 border-t border-neutral-800">
+  <div class="flex flex-col gap-1 items-center">
+    <span class="font-boldonse text-yellow-400 text-lg tracking-wide">MY <span class="text-white">60</span> MOVIES</span>
+    <span class="text-neutral-500 text-sm font-saira tracking-wider">by Alok Gupta</span>
+  </div>
+  <div class="h-14 w-14 rounded-full border-2 border-yellow-800 bg-[url('/my-photo.jpg')] bg-center bg-cover"></div>
+</footer>
     <!-- Instagram floating button - bottom right WhatsApp style -->
     <a href="https://www.instagram.com/alokkallao/" id="insta-btn" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 hover:scale-110 active:scale-95" style="background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
