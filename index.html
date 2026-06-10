@@ -26,6 +26,30 @@
          <div class="relative z-10 flex flex-col items-center gap-4 px-6"><h1 class="anim-2 font-boldonse text-5xl sm:text-6xl md:text-8xl leading-none text-white">
         MY <span class="text-yellow-400">60</span><br>MOVIES
       </h1></div>
+      <!-- Search Slide-in Bar -->
+<div id="search-slide" class="fixed top-0 left-0 right-0 z-[1000] bg-[#0d1117] border-b border-yellow-800 px-4 py-3 flex items-center gap-3 -translate-y-full transition-transform duration-300 ease-in-out">
+  <i class="ti ti-search text-yellow-400 text-xl"></i>
+  <input 
+    id="search-input"
+    type="text" 
+    placeholder="Search movies..." 
+    class="flex-1 bg-transparent border-none outline-none text-white text-base font-saira"
+  />
+  <button  onclick="window.open('https://vidbox.pages.dev/', '_blank')" aria-label="Close search" class="p-1 cursor-pointer bg-transparent border-none">
+    <i class="ti ti-x text-gray-400 text-xl"></i>
+  </button>
+</div>
+
+<!-- Fixed Bottom Search Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-[#090b10] border-t border-yellow-800/50 h-14 flex items-center justify-center">
+  <button 
+     onclick="window.open('https://vidbox.pages.dev/', '_blank')" 
+    class="flex items-center gap-2 border border-yellow-400 text-yellow-400 font-saira font-semibold text-sm px-7 py-2 rounded-lg bg-transparent tracking-wide hover:bg-yellow-400/10 transition-colors"
+  >
+    <i class="ti ti-search text-lg"></i>
+    Search Movies
+  </button>
+</div>
        <div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-[999] items-center justify-center">
   <img id="lightbox-img" src="/my-photo.png" class="w-auto h-auto max-w-[95vw] max-h-[95vh] object-contain rounded-xl border border-white shadow-2xl">
   <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white text-4xl">&times;</button>
@@ -2229,6 +2253,8 @@ document.addEventListener('keydown', function(e) {
     closeTrailer()
   }
 })
+
+
 
 
     </script>
